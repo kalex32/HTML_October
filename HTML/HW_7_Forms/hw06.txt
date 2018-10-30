@@ -1,0 +1,2 @@
+Сверстать формы представленные на рис.form3.png
+http://htmlbook.ru/html/input/type
