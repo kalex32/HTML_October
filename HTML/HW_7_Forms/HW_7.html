@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title> HW_7_Forms </title>
-	<style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> HW_7_Forms </title>
+    <style>
         h1{
             font-family: "Ascender";
             
@@ -12,13 +12,55 @@
         body{
             text-align: left;
         }
+        p{
+            font-family: "Franklin Gitic Medium";
+        }
+        h2{
+            font-family: amiri;
+        }
+        fieldset{
+            width: 200px;
+            height: 100px;
+        }
+        input{
+            margin-top: 15px;
+        }
+        .cardT{
+            width: 120px;
+        }
     </style>
 </head>
 
-	<body>
-	<h1>
-	    Payment form
-	</h1>
+<body>
+    <h1>
+        Payment form
+    </h1>
+    <p>
+        Required fields are followed by <b>*</b>
+    </p>
+    <h2>
+        Contact information
+    </h2>
+    <fieldset>
+        <legend>Title</legend>
+        <ul>
+            <li><label><input type="radio" name="dummy" value="mister">Mister </label></li>
+            <li><label><input type="radio" name="dummy" value="miss">Miss </label></li>
+        </ul>
+    </fieldset>
 
+    Name: <input type="text" name="Name" minlength="2"> <b>*</b>
+    <br>
+    Email: <input type="email" name="Name" minlength="2"> <b>*</b>
+    <h2>
+        Payment information
+    </h2>
+    Card type: <select class="cardT" name="select_card">
+        <option value="Visa">Visa</option>
+        <option value="MasterCard">MasterCard</option>
+        <option value="AmericanExpress">AmericanExpress</option>
+    </select>
+    <br>
+    <select name="" id=""></select>
 </body>
 </html>
