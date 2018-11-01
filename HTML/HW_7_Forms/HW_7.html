@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -28,39 +29,51 @@
         .cardT{
             width: 120px;
         }
+        select{
+            background-color: darkgrey;
+        }
     </style>
 </head>
 
 <body>
-    <h1>
-        Payment form
-    </h1>
-    <p>
-        Required fields are followed by <b>*</b>
-    </p>
-    <h2>
-        Contact information
-    </h2>
-    <fieldset>
-        <legend>Title</legend>
-        <ul>
-            <li><label><input type="radio" name="dummy" value="mister">Mister </label></li>
-            <li><label><input type="radio" name="dummy" value="miss">Miss </label></li>
-        </ul>
-    </fieldset>
+    <form>
+        <h1>
+            Payment form
+        </h1>
+        <p>
+            Required fields are followed by <b>*</b>
+        </p>
+        <h2>
+            Contact information
+        </h2>
+        <fieldset>
+            <legend>Title</legend>
+            <ul>
+                <li><label><input type="radio" name="dummy" value="mister">Mister </label></li>
+                <li><label><input type="radio" name="dummy" value="miss">Miss </label></li>
+            </ul>
+        </fieldset>
 
-    Name: <input type="text" name="Name" minlength="2"> <b>*</b>
-    <br>
-    Email: <input type="email" name="Name" minlength="2"> <b>*</b>
-    <h2>
-        Payment information
-    </h2>
-    Card type: <select class="cardT" name="select_card">
-        <option value="Visa">Visa</option>
-        <option value="MasterCard">MasterCard</option>
-        <option value="AmericanExpress">AmericanExpress</option>
-    </select>
-    <br>
-    <select name="" id=""></select>
+        Name: <input type="text" name="Name" minlength="2"> <b>*</b>
+        <br>
+        Email: <input type="email" name="Email" pattern="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$"> <b>*</b>
+        <h2>
+            Payment information
+        </h2>
+        Card type: <select class="cardT" name="select_card">
+            <option value="Visa">Visa</option>
+            <option value="MasterCard">MasterCard</option>
+            <option value="AmericanExpress">AmericanExpress</option>
+        </select>
+        <br>
+        <!--    <select name="" id=""></select>-->
+        Card number: <input type="text" name="CardNumber" min="16" pattern="[0-9]{13,16}">*
+        <br>
+        Expiration date: <input type="datetime" name="ExpirationDate" pattern="(0[1-9]|1[012])[- /.]\d\d">* <i>formated as mm/yy</i>
+        <br>
+        <input type="submit" value="Validate the payment" 1>
+    </form>
 </body>
+
+
 </html>
